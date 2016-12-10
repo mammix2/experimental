@@ -1,0 +1,427 @@
+23:26:35:454	898	args: -zpool us1-zcash.flypool.org:3333 -zwal t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX -zpsw x 
+23:26:35:454	898	
+23:26:35:470	898	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+23:26:35:486	898	บ            Claymore's ZCash AMD GPU Miner v8.0 Beta            บ
+23:26:35:486	898	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+23:26:35:486	898	
+23:26:35:712	898	ZEC: 1 pool is specified
+23:26:35:712	898	Main ZCash pool is us1-zcash.flypool.org:3333
+23:26:37:353	898	OpenCL platform: AMD Accelerated Parallel Processing
+23:26:37:353	898	OpenCL initializing...
+
+23:26:37:369	898	AMD Cards available: 2 
+23:26:37:369	898	GPU #0: Tonga, 4096 MB available, 28 compute units
+23:26:37:369	898	GPU #0 recognized as Radeon 285/380
+23:26:37:369	898	GPU #1: Tonga, 4096 MB available, 28 compute units
+23:26:37:369	898	GPU #1 recognized as Radeon 285/380
+23:26:37:384	898	POOL version
+23:26:37:384	898	b282 
+23:26:37:384	898	Platform: Windows
+23:26:37:400	898	start building OpenCL program for GPU 0...
+23:26:37:415	898	done
+23:26:37:525	898	Error: AMD HSA Code Object loading failed.
+
+23:26:37:525	898	16x binary failed, try 15x
+23:26:37:619	898	start building OpenCL program for GPU 0...
+23:26:38:634	898	done
+23:26:38:744	898	start building OpenCL program for GPU 1...
+23:26:38:744	898	done
+23:26:38:869	898	Error: AMD HSA Code Object loading failed.
+
+23:26:38:869	898	16x binary failed, try 15x
+23:26:38:869	898	start building OpenCL program for GPU 1...
+23:26:39:650	898	done
+23:26:39:775	898	GPU #0 intensity 4
+23:26:39:775	898	GPU #1 intensity 4
+23:26:39:790	898	Total cards: 2 
+23:26:51:029	d0c	ZEC: Stratum - connecting to 'us1-zcash.flypool.org' <192.99.33.207> port 3333
+23:26:51:090	898	Watchdog enabled
+23:26:51:090	898	Remote management (READ-ONLY MODE) is enabled on port 3333
+23:26:51:090	898	
+23:26:51:287	d0c	send: {"id": 1, "method": "mining.subscribe", "params": ["equihashminer", null, "us1-zcash.flypool.org", "3333"]}
+
+23:26:51:302	d0c	send: {"id": 2, "method": "mining.authorize", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","x"]}
+
+23:26:51:302	d0c	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+23:26:51:318	d0c	ZEC: Stratum - Connected (us1-zcash.flypool.org:3333)
+23:26:51:568	d0c	got 62 bytes
+23:26:51:568	d0c	buf: {"id":1,"result":["6e432c399f", "6e432c399f"], "error": null}
+
+23:26:51:584	d0c	parse packet: 58
+23:26:51:584	d0c	new buf size: 0
+23:26:51:818	d0c	got 157 bytes
+23:26:51:818	d0c	buf: {"id":2,"result":true, "error": null}
+{"id":null,"method":"mining.set_target","params":["0020c49ba5e353f7ced916872b020c49ba5e353f7ced916872b020c49ba5e353"]}
+
+23:26:51:834	d0c	parse packet: 35
+23:26:51:834	d0c	ZEC: Authorized
+23:26:51:849	d0c	remove first packet 119
+23:26:51:849	d0c	new buf size: 119
+23:26:51:849	d0c	parse packet: 118
+23:26:51:865	d0c	Pool sets new share target: 0x0020c49b (diff: 2000H)
+23:26:51:865	d0c	new buf size: 0
+23:26:52:818	d0c	got 310 bytes
+23:26:52:818	d0c	buf: {"id":null,"method":"mining.notify","params":["ca96bc588e89e70ff609","04000000","76f36b6b5611670b8af9d049953e0cbea00ab1055e9abd9ddc23353e00000000","0d20a0a6e29e796cde5d36252d22ac3151f2059d2810eb096dad3297f90b2ccd","0000000000000000000000000000000000000000000000000000000000000000","fd484c58","8292001d",true]}
+
+23:26:52:834	d0c	parse packet: 309
+23:26:52:834	d0c	new buf size: 0
+23:26:55:756	1548	ZEC: put share nonce 14a
+23:26:55:756	1548	ZEC round found 1 shares
+23:26:55:771	d0c	ZEC: 12/10/16-23:26:55 - SHARE FOUND - (GPU 0)
+23:26:55:771	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","4a0100000000000000000000000000000000000000000000000000","fd400500b523eef
+23:26:56:053	d0c	got 23 bytes
+23:26:56:053	d0c	buf: {"id":4,"result":true}
+
+23:26:56:068	d0c	parse packet: 22
+23:26:56:068	d0c	ZEC: Share accepted (281 ms)!
+23:26:56:084	d0c	new buf size: 0
+23:26:56:318	1d54	ZEC: put share nonce 18d
+23:26:56:318	1d54	ZEC round found 1 shares
+23:26:56:334	d0c	ZEC: 12/10/16-23:26:56 - SHARE FOUND - (GPU 0)
+23:26:56:349	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","8d0100000000000000000000000000000000000000000000000000","fd400500366542f
+23:26:56:615	d0c	got 23 bytes
+23:26:56:615	d0c	buf: {"id":4,"result":true}
+
+23:26:56:631	d0c	parse packet: 22
+23:26:56:631	d0c	ZEC: Share accepted (281 ms)!
+23:26:56:647	d0c	new buf size: 0
+23:26:57:959	1d54	ZEC: put share nonce 26e
+23:26:57:975	1d54	ZEC round found 1 shares
+23:26:57:990	d0c	ZEC: 12/10/16-23:26:57 - SHARE FOUND - (GPU 0)
+23:26:57:990	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","6e0200000000000000000000000000000000000000000000000000","fd40050030b9673
+23:26:58:272	d0c	got 23 bytes
+23:26:58:272	d0c	buf: {"id":4,"result":true}
+
+23:26:58:287	d0c	parse packet: 22
+23:26:58:303	d0c	ZEC: Share accepted (297 ms)!
+23:26:58:303	d0c	new buf size: 0
+23:27:04:663	b0c	ZEC: put share nonce 5e5
+23:27:04:663	b0c	ZEC round found 1 shares
+23:27:04:678	d0c	ZEC: 12/10/16-23:27:04 - SHARE FOUND - (GPU 0)
+23:27:04:694	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","e50500000000000000000000000000000000000000000000000000","fd4005002a032df
+23:27:04:960	d0c	got 23 bytes
+23:27:04:960	d0c	buf: {"id":4,"result":true}
+
+23:27:04:975	d0c	parse packet: 22
+23:27:04:975	d0c	ZEC: Share accepted (282 ms)!
+23:27:04:991	d0c	new buf size: 0
+23:27:21:272	898	GPU0 t=65C fan=16%
+23:27:21:272	898	em hbt: 0, fm hbt: 79, 
+23:27:21:272	898	watchdog - thread 0, hb time 16
+23:27:21:288	898	watchdog - thread 1, hb time 188
+23:27:21:288	898	watchdog - thread 2, hb time 125
+23:27:21:288	898	watchdog - thread 3, hb time 79
+23:27:21:304	898	watchdog - thread 4, hb time 125
+23:27:21:304	898	watchdog - thread 5, hb time 188
+23:27:21:304	898	watchdog - thread 6, hb time 0
+23:27:21:319	898	watchdog - thread 7, hb time 63
+23:27:22:663	1174	ZEC: put share nonce f81
+23:27:22:679	1174	ZEC round found 1 shares
+23:27:22:694	d0c	ZEC: 12/10/16-23:27:22 - SHARE FOUND - (GPU 0)
+23:27:22:694	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","810f00000000000000000000000000000000000000000000000000","fd4005021ba76fc
+23:27:22:976	d0c	got 23 bytes
+23:27:22:976	d0c	buf: {"id":4,"result":true}
+
+23:27:22:991	d0c	parse packet: 22
+23:27:22:991	d0c	ZEC: Share accepted (281 ms)!
+23:27:23:007	d0c	new buf size: 0
+23:27:26:132	1d54	ZEC: put share nonce 116f
+23:27:26:132	1d54	ZEC round found 1 shares
+23:27:26:147	d0c	ZEC: 12/10/16-23:27:26 - SHARE FOUND - (GPU 0)
+23:27:26:147	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","6f1100000000000000000000000000000000000000000000000000","fd400500191e663
+23:27:26:413	d0c	got 23 bytes
+23:27:26:413	d0c	buf: {"id":4,"result":true}
+
+23:27:26:429	d0c	parse packet: 22
+23:27:26:444	d0c	ZEC: Share accepted (281 ms)!
+23:27:26:444	d0c	new buf size: 0
+23:27:29:663	214	ZEC: put share nonce 1379
+23:27:29:663	214	ZEC round found 1 shares
+23:27:29:679	d0c	ZEC: 12/10/16-23:27:29 - SHARE FOUND - (GPU 1)
+23:27:29:694	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","791300000000000000000000000000000000000000000000000000","fd40050068b3fc3
+23:27:29:960	d0c	got 23 bytes
+23:27:29:960	d0c	buf: {"id":4,"result":true}
+
+23:27:29:976	d0c	parse packet: 22
+23:27:29:976	d0c	ZEC: Share accepted (282 ms)!
+23:27:29:991	d0c	new buf size: 0
+23:27:36:867	214	ZEC: put share nonce 1759
+23:27:36:882	214	ZEC round found 1 shares
+23:27:36:898	d0c	ZEC: 12/10/16-23:27:36 - SHARE FOUND - (GPU 1)
+23:27:36:913	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","591700000000000000000000000000000000000000000000000000","fd400500261255c
+23:27:37:179	d0c	got 23 bytes
+23:27:37:179	d0c	buf: {"id":4,"result":true}
+
+23:27:37:195	d0c	parse packet: 22
+23:27:37:195	d0c	ZEC: Share accepted (281 ms)!
+23:27:37:210	d0c	new buf size: 0
+23:27:47:585	b0c	ZEC: put share nonce 1cc5
+23:27:47:601	b0c	ZEC round found 1 shares
+23:27:47:617	d0c	ZEC: 12/10/16-23:27:47 - SHARE FOUND - (GPU 0)
+23:27:47:617	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","c51c00000000000000000000000000000000000000000000000000","fd400500136f3f0
+23:27:47:898	d0c	got 23 bytes
+23:27:47:898	d0c	buf: {"id":4,"result":true}
+
+23:27:47:913	d0c	parse packet: 22
+23:27:47:913	d0c	ZEC: Share accepted (281 ms)!
+23:27:47:913	d0c	new buf size: 0
+23:27:51:476	898	GPU0 t=66C fan=19%
+23:27:51:476	898	em hbt: 0, fm hbt: 94, 
+23:27:51:492	898	watchdog - thread 0, hb time 218
+23:27:51:492	898	watchdog - thread 1, hb time 156
+23:27:51:507	898	watchdog - thread 2, hb time 93
+23:27:51:507	898	watchdog - thread 3, hb time 47
+23:27:51:507	898	watchdog - thread 4, hb time 93
+23:27:51:523	898	watchdog - thread 5, hb time 156
+23:27:51:523	898	watchdog - thread 6, hb time -16
+23:27:51:523	898	watchdog - thread 7, hb time 47
+23:27:59:601	11a0	ZEC: put share nonce 239e
+23:27:59:617	11a0	ZEC round found 1 shares
+23:27:59:633	d0c	ZEC: 12/10/16-23:27:59 - SHARE FOUND - (GPU 1)
+23:27:59:633	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","9e2300000000000000000000000000000000000000000000000000","fd400500e265d6e
+23:27:59:914	d0c	got 23 bytes
+23:27:59:914	d0c	buf: {"id":4,"result":true}
+
+23:27:59:930	d0c	parse packet: 22
+23:27:59:930	d0c	ZEC: Share accepted (281 ms)!
+23:27:59:945	d0c	new buf size: 0
+23:28:07:977	1bd8	ZEC: put share nonce 2812
+23:28:07:977	1bd8	ZEC round found 1 shares
+23:28:07:992	d0c	ZEC: 12/10/16-23:28:07 - SHARE FOUND - (GPU 1)
+23:28:08:008	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","122800000000000000000000000000000000000000000000000000","fd4005014fd339e
+23:28:08:289	d0c	got 23 bytes
+23:28:08:289	d0c	buf: {"id":4,"result":true}
+
+23:28:08:305	d0c	parse packet: 22
+23:28:08:320	d0c	ZEC: Share accepted (296 ms)!
+23:28:08:320	d0c	new buf size: 0
+23:28:11:258	b0c	ZEC: put share nonce 2967
+23:28:11:258	b0c	ZEC round found 1 shares
+23:28:11:274	d0c	ZEC: 12/10/16-23:28:11 - SHARE FOUND - (GPU 0)
+23:28:11:289	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","672900000000000000000000000000000000000000000000000000","fd400501173df1a
+23:28:11:555	d0c	got 23 bytes
+23:28:11:555	d0c	buf: {"id":4,"result":true}
+
+23:28:11:571	d0c	parse packet: 22
+23:28:11:571	d0c	ZEC: Share accepted (281 ms)!
+23:28:11:586	d0c	new buf size: 0
+23:28:13:383	11a0	ZEC: put share nonce 2aff
+23:28:13:383	11a0	ZEC round found 1 shares
+23:28:13:399	d0c	ZEC: 12/10/16-23:28:13 - SHARE FOUND - (GPU 1)
+23:28:13:414	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","ff2a00000000000000000000000000000000000000000000000000","fd400500200dea5
+23:28:13:680	d0c	got 23 bytes
+23:28:13:680	d0c	buf: {"id":4,"result":true}
+
+23:28:13:696	d0c	parse packet: 22
+23:28:13:696	d0c	ZEC: Share accepted (281 ms)!
+23:28:13:711	d0c	new buf size: 0
+23:28:17:946	1d54	ZEC: put share nonce 2d0d
+23:28:17:961	1d54	ZEC round found 1 shares
+23:28:17:977	d0c	ZEC: 12/10/16-23:28:17 - SHARE FOUND - (GPU 0)
+23:28:17:977	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","0d2d00000000000000000000000000000000000000000000000000","fd40050025f3f95
+23:28:18:024	11a0	ZEC: put share nonce 2d7f
+23:28:18:039	11a0	ZEC round found 1 shares
+23:28:18:055	d0c	ZEC: 12/10/16-23:28:18 - SHARE FOUND - (GPU 1)
+23:28:18:055	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","ca96bc588e89e70ff609","fd484c58","7f2d00000000000000000000000000000000000000000000000000","fd4005018ce9b8d
+23:28:18:243	d0c	got 23 bytes
+23:28:18:243	d0c	buf: {"id":4,"result":true}
+
+23:28:18:258	d0c	parse packet: 22
+23:28:18:258	d0c	ZEC: Share accepted (188 ms)!
+23:28:18:274	d0c	new buf size: 0
+23:28:18:336	d0c	got 23 bytes
+23:28:18:336	d0c	buf: {"id":4,"result":true}
+
+23:28:18:352	d0c	parse packet: 22
+23:28:18:352	d0c	ZEC: Share accepted (282 ms)!
+23:28:18:367	d0c	new buf size: 0
+23:28:21:696	898	GPU0 t=66C fan=20%
+23:28:21:711	898	em hbt: 0, fm hbt: 31, 
+23:28:21:711	898	watchdog - thread 0, hb time 203
+23:28:21:727	898	watchdog - thread 1, hb time 141
+23:28:21:727	898	watchdog - thread 2, hb time 78
+23:28:21:727	898	watchdog - thread 3, hb time 16
+23:28:21:743	898	watchdog - thread 4, hb time 16
+23:28:21:743	898	watchdog - thread 5, hb time 78
+23:28:21:743	898	watchdog - thread 6, hb time 141
+23:28:21:758	898	watchdog - thread 7, hb time -31
+23:28:39:290	d0c	got 310 bytes
+23:28:39:290	d0c	buf: {"id":null,"method":"mining.notify","params":["227a3d2fe3e7a73c4ccb","04000000","76f36b6b5611670b8af9d049953e0cbea00ab1055e9abd9ddc23353e00000000","e909c21a3b45db65abe46c761815ba3d4d071cce463eba4a9fbc0111d6921579","0000000000000000000000000000000000000000000000000000000000000000","76494c58","8292001d",true]}
+
+23:28:39:306	d0c	parse packet: 309
+23:28:39:322	d0c	new buf size: 0
+23:28:39:322	d0c	ZEC: 12/10/16-23:28:39 - New job from us1-zcash.flypool.org:3333
+23:28:39:337	d0c	target: 0x0020c49b (diff: 2000H)
+23:28:39:337	d0c	ZEC - Total Speed: 264.646 H/s, Total Shares: 15, Rejected: 0, Time: 00:01
+23:28:39:337	d0c	ZEC: GPU0 132.972 H/s, GPU1 131.674 H/s
+23:28:51:931	898	GPU0 t=67C fan=21%
+23:28:51:947	898	em hbt: 0, fm hbt: 78, 
+23:28:51:947	898	watchdog - thread 0, hb time 187
+23:28:51:947	898	watchdog - thread 1, hb time 125
+23:28:51:947	898	watchdog - thread 2, hb time 78
+23:28:51:963	898	watchdog - thread 3, hb time 15
+23:28:51:963	898	watchdog - thread 4, hb time 15
+23:28:51:963	898	watchdog - thread 5, hb time 78
+23:28:51:963	898	watchdog - thread 6, hb time 140
+23:28:51:963	898	watchdog - thread 7, hb time 203
+23:28:56:525	50c	ZEC: put share nonce 914
+23:28:56:525	50c	ZEC round found 1 shares
+23:28:56:541	d0c	ZEC: 12/10/16-23:28:56 - SHARE FOUND - (GPU 1)
+23:28:56:556	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","227a3d2fe3e7a73c4ccb","76494c58","140900000000000000000000000000000000000000000000000000","fd400500ac2eed3
+23:28:56:822	d0c	got 23 bytes
+23:28:56:822	d0c	buf: {"id":4,"result":true}
+
+23:28:56:838	d0c	parse packet: 22
+23:28:56:838	d0c	ZEC: Share accepted (281 ms)!
+23:28:56:853	d0c	new buf size: 0
+23:28:58:791	1174	ZEC: put share nonce a41
+23:28:58:807	1174	ZEC round found 1 shares
+23:28:58:822	d0c	ZEC: 12/10/16-23:28:58 - SHARE FOUND - (GPU 0)
+23:28:58:822	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","227a3d2fe3e7a73c4ccb","76494c58","410a00000000000000000000000000000000000000000000000000","fd400500c9c5057
+23:28:59:104	d0c	got 23 bytes
+23:28:59:104	d0c	buf: {"id":4,"result":true}
+
+23:28:59:119	d0c	parse packet: 22
+23:28:59:119	d0c	ZEC: Share accepted (281 ms)!
+23:28:59:135	d0c	new buf size: 0
+23:29:22:151	898	GPU0 t=67C fan=22%
+23:29:22:151	898	em hbt: 0, fm hbt: 94, 
+23:29:22:167	898	watchdog - thread 0, hb time 172
+23:29:22:167	898	watchdog - thread 1, hb time 109
+23:29:22:167	898	watchdog - thread 2, hb time 47
+23:29:22:182	898	watchdog - thread 3, hb time -16
+23:29:22:182	898	watchdog - thread 4, hb time 172
+23:29:22:182	898	watchdog - thread 5, hb time 0
+23:29:22:182	898	watchdog - thread 6, hb time 47
+23:29:22:198	898	watchdog - thread 7, hb time 109
+23:29:24:214	1548	ZEC: put share nonce 17ca
+23:29:24:230	1548	ZEC round found 1 shares
+23:29:24:245	d0c	ZEC: 12/10/16-23:29:24 - SHARE FOUND - (GPU 0)
+23:29:24:261	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","227a3d2fe3e7a73c4ccb","76494c58","ca1700000000000000000000000000000000000000000000000000","fd4005000f6120e
+23:29:24:527	d0c	got 23 bytes
+23:29:24:527	d0c	buf: {"id":4,"result":true}
+
+23:29:24:542	d0c	parse packet: 22
+23:29:24:542	d0c	ZEC: Share accepted (281 ms)!
+23:29:24:558	d0c	new buf size: 0
+23:29:38:184	b0c	ZEC: put share nonce 1f47
+23:29:38:199	b0c	ZEC round found 1 shares
+23:29:38:215	d0c	ZEC: 12/10/16-23:29:38 - SHARE FOUND - (GPU 0)
+23:29:38:215	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","227a3d2fe3e7a73c4ccb","76494c58","471f00000000000000000000000000000000000000000000000000","fd400500465c83a
+23:29:38:496	d0c	got 23 bytes
+23:29:38:496	d0c	buf: {"id":4,"result":true}
+
+23:29:38:512	d0c	parse packet: 22
+23:29:38:512	d0c	ZEC: Share accepted (281 ms)!
+23:29:38:527	d0c	new buf size: 0
+23:29:42:403	214	ZEC: put share nonce 21bb
+23:29:42:418	214	ZEC round found 1 shares
+23:29:42:434	d0c	ZEC: 12/10/16-23:29:42 - SHARE FOUND - (GPU 1)
+23:29:42:434	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","227a3d2fe3e7a73c4ccb","76494c58","bb2100000000000000000000000000000000000000000000000000","fd40050040d2de6
+23:29:42:700	d0c	got 23 bytes
+23:29:42:700	d0c	buf: {"id":4,"result":true}
+
+23:29:42:715	d0c	parse packet: 22
+23:29:42:731	d0c	ZEC: Share accepted (297 ms)!
+23:29:42:731	d0c	new buf size: 0
+23:29:44:262	214	ZEC: put share nonce 22ba
+23:29:44:278	214	ZEC round found 1 shares
+23:29:44:293	d0c	ZEC: 12/10/16-23:29:44 - SHARE FOUND - (GPU 1)
+23:29:44:309	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","227a3d2fe3e7a73c4ccb","76494c58","ba2200000000000000000000000000000000000000000000000000","fd400500dad8b35
+23:29:44:559	1548	ZEC: put share nonce 22aa
+23:29:44:575	1548	ZEC round found 1 shares
+23:29:44:575	d0c	got 23 bytes
+23:29:44:590	d0c	buf: {"id":4,"result":true}
+
+23:29:44:606	d0c	parse packet: 22
+23:29:44:622	d0c	ZEC: Share accepted (312 ms)!
+23:29:44:622	d0c	new buf size: 0
+23:29:44:637	d0c	ZEC: 12/10/16-23:29:44 - SHARE FOUND - (GPU 0)
+23:29:44:637	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","227a3d2fe3e7a73c4ccb","76494c58","aa2200000000000000000000000000000000000000000000000000","fd400500173b8a6
+23:29:44:903	d0c	got 23 bytes
+23:29:44:903	d0c	buf: {"id":4,"result":true}
+
+23:29:44:918	d0c	parse packet: 22
+23:29:44:934	d0c	ZEC: Share accepted (297 ms)!
+23:29:44:934	d0c	new buf size: 0
+23:29:46:075	11a0	ZEC: put share nonce 23bc
+23:29:46:090	11a0	ZEC round found 1 shares
+23:29:46:106	d0c	ZEC: 12/10/16-23:29:46 - SHARE FOUND - (GPU 1)
+23:29:46:106	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","227a3d2fe3e7a73c4ccb","76494c58","bc2300000000000000000000000000000000000000000000000000","fd40050073e23f7
+23:29:46:387	d0c	got 23 bytes
+23:29:46:387	d0c	buf: {"id":4,"result":true}
+
+23:29:46:403	d0c	parse packet: 22
+23:29:46:403	d0c	ZEC: Share accepted (282 ms)!
+23:29:46:418	d0c	new buf size: 0
+23:29:47:122	50c	ZEC: put share nonce 2434
+23:29:47:137	50c	ZEC round found 1 shares
+23:29:47:153	d0c	ZEC: 12/10/16-23:29:47 - SHARE FOUND - (GPU 1)
+23:29:47:153	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","227a3d2fe3e7a73c4ccb","76494c58","342400000000000000000000000000000000000000000000000000","fd40050030cf539
+23:29:47:419	d0c	got 23 bytes
+23:29:47:419	d0c	buf: {"id":4,"result":true}
+
+23:29:47:434	d0c	parse packet: 22
+23:29:47:434	d0c	ZEC: Share accepted (281 ms)!
+23:29:47:450	d0c	new buf size: 0
+23:29:50:215	1bd8	ZEC: put share nonce 25f3
+23:29:50:231	1bd8	ZEC round found 1 shares
+23:29:50:247	d0c	ZEC: 12/10/16-23:29:50 - SHARE FOUND - (GPU 1)
+23:29:50:247	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","227a3d2fe3e7a73c4ccb","76494c58","f32500000000000000000000000000000000000000000000000000","fd4005002b35634
+23:29:50:528	d0c	got 23 bytes
+23:29:50:528	d0c	buf: {"id":4,"result":true}
+
+23:29:50:544	d0c	parse packet: 22
+23:29:50:544	d0c	ZEC: Share accepted (281 ms)!
+23:29:50:559	d0c	new buf size: 0
+23:29:52:372	898	GPU0 t=67C fan=22%
+23:29:52:387	898	em hbt: 0, fm hbt: 31, 
+23:29:52:387	898	watchdog - thread 0, hb time 188
+23:29:52:387	898	watchdog - thread 1, hb time 125
+23:29:52:387	898	watchdog - thread 2, hb time 63
+23:29:52:403	898	watchdog - thread 3, hb time 16
+23:29:52:403	898	watchdog - thread 4, hb time 78
+23:29:52:403	898	watchdog - thread 5, hb time 141
+23:29:52:403	898	watchdog - thread 6, hb time 188
+23:29:52:419	898	watchdog - thread 7, hb time 16
+23:30:22:592	898	GPU0 t=68C fan=22%
+23:30:22:608	898	em hbt: 0, fm hbt: 63, 
+23:30:22:608	898	watchdog - thread 0, hb time 47
+23:30:22:608	898	watchdog - thread 1, hb time 219
+23:30:22:608	898	watchdog - thread 2, hb time 157
+23:30:22:623	898	watchdog - thread 3, hb time 94
+23:30:22:623	898	watchdog - thread 4, hb time 16
+23:30:22:623	898	watchdog - thread 5, hb time 78
+23:30:22:639	898	watchdog - thread 6, hb time 125
+23:30:22:639	898	watchdog - thread 7, hb time 188
+23:30:25:936	d0c	got 310 bytes
+23:30:25:936	d0c	buf: {"id":null,"method":"mining.notify","params":["bf1f17526da3c71992bc","04000000","76f36b6b5611670b8af9d049953e0cbea00ab1055e9abd9ddc23353e00000000","78aebfa36bd0169c8a89155abbf55c60fcf3db137277d1622a0ceadfae10767d","0000000000000000000000000000000000000000000000000000000000000000","e1494c58","8292001d",true]}
+
+23:30:25:952	d0c	parse packet: 309
+23:30:25:967	d0c	new buf size: 0
+23:30:25:967	d0c	ZEC: 12/10/16-23:30:25 - New job from us1-zcash.flypool.org:3333
+23:30:25:967	d0c	target: 0x0020c49b (diff: 2000H)
+23:30:25:983	d0c	ZEC - Total Speed: 261.772 H/s, Total Shares: 25, Rejected: 0, Time: 00:03
+23:30:25:983	d0c	ZEC: GPU0 130.470 H/s, GPU1 131.302 H/s
+23:30:29:014	1548	ZEC: put share nonce 16b
+23:30:29:014	1548	ZEC round found 1 shares
+23:30:29:030	d0c	ZEC: 12/10/16-23:30:29 - SHARE FOUND - (GPU 0)
+23:30:29:046	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","bf1f17526da3c71992bc","e1494c58","6b0100000000000000000000000000000000000000000000000000","fd40050005e43ea
+23:30:29:108	1bd8	ZEC: put share nonce 193
+23:30:29:124	1bd8	ZEC round found 1 shares
+23:30:29:139	d0c	ZEC: 12/10/16-23:30:29 - SHARE FOUND - (GPU 1)
+23:30:29:139	d0c	send share: {"id": 4, "method": "mining.submit", "params": ["t1droEt3n1cexiu9kvHNe8k71AdGSUJjDxp.minerX","bf1f17526da3c71992bc","e1494c58","930100000000000000000000000000000000000000000000000000","fd400501506db4d
+23:30:29:311	d0c	got 23 bytes
+23:30:29:311	d0c	buf: {"id":4,"result":true}
+
+23:30:29:327	d0c	parse packet: 22
+23:30:29:327	d0c	ZEC: Share accepted (171 ms)!
+23:30:29:342	d0c	new buf size: 0
+23:30:29:421	d0c	got 23 bytes
+23:30:29:421	d0c	buf: {"id":4,"result":true}
+
+23:30:29:436	d0c	parse packet: 22
+23:30:29:436	d0c	ZEC: Share accepted (281 ms)!
+23:30:29:452	d0c	new buf size: 0
+23:30:39:108	1b0c	Quit...
