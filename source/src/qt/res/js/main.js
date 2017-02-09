@@ -649,13 +649,13 @@ var overviewPage = {
                         bridge.userAction(['debugClicked']);
                      }
                  },
-                 {
-                     name: 'Developer&nbsp;Tools...',
-                     fa: 'fa-edit red fa-fw',
-                     fun: function () {
-                        bridge.userAction(['developerConsole']);
-                     }
-                 },
+           //      {
+           //          name: 'Developer&nbsp;Tools...',
+           //          fa: 'fa-edit red fa-fw',
+           //          fun: function () {
+           //             bridge.userAction(['developerConsole']);
+           //          }
+           //      },
                  {
                      name: ' About&nbsp;DigitalRS...',
                      img: 'qrc:///icons/digitalrs',
