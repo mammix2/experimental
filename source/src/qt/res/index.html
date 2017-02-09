@@ -28,7 +28,7 @@
 <body>
 
 <div id="layout">
-    <!-- Menu toggle -->
+
     <a href="#navpanel" id="navlink">
         <!-- Hamburger icon -->
         <span></span>
@@ -39,9 +39,11 @@
             <span><a id="file"     href="#">File</a></span>
             <span><a id="settings" href="#">Settings</a></span>
             <span><a id="help"     href="#">Help</a></span>
+    <!-- Adding options menu up top - Dr. Asif -->
+        	<span><a id="options"  href="#">Options</a></span>
         </div>
         <div style="text-align:center;">
-            <a href="http://digitalrs.cash" target="_blank"><img src="qrc:///images/drs-vertical"></a>
+            <a href="http://digitalrs.me" target="_blank"><img src="qrc:///images/drs-vertical"></a>
         </div>
 
         <ul id="navitems" class="vmenu">
@@ -95,23 +97,23 @@
 
             <span style="white-space:nowrap;">
                 <label for="qraddress" class="recipient">Address:</label>
-                <input id="qraddress" class="pay_to input_box" style="width:250px" placeholder="Enter a DigitalRS address (e.g. DXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)" onchange="showQRCode();" />
+                <input id="qraddress" class="pay_to input_box" style="width:250px" placeholder="Enter a DigitalRS address (e.g. DXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)" onChange="showQRCode();" />
             </span>
 
             <span style="white-space:nowrap;">
                 <label for="qrlabel" class="recipient">Label:</label>
-                <input id="qrlabel" class="label input_box" style="width:250px" placeholder="Enter a label for this address to add it to your address book" onchange="showQRCode();" />
+                <input id="qrlabel" class="label input_box" style="width:250px" placeholder="Enter a label for this address to add it to your address book" onChange="showQRCode();" />
             </span>
 
             <span style="white-space:nowrap;">
                 <label for="qrnarration" class="recipient">Narration:</label>
-                <input id="qrnarration" class="narration input_box" style="width:250px" placeholder="Enter a short note to send with a payment (max 24 characters)" onchange="showQRCode();" />
+                <input id="qrnarration" class="narration input_box" style="width:250px" placeholder="Enter a short note to send with a payment (max 24 characters)" onChange="showQRCode();" />
             </span>
 
             <span style="white-space:nowrap;">
                 <label for="qramount" class="recipient">Amount:</label>
-                <input id="qramount" style="width:140px;" type="number" placeholder="0.00000000" step="0.01" value="0.00000000" onchange="unit.parse(this, $('#qrunit').val());showQRCode();" />
-                <select id="qrunit" class="unit button is-inverse has-fixed-icon" style="margin-left:10px; height:43px; width:100px;" onchange="unit.format('#qramount', $(this).val());showQRCode();">
+                <input id="qramount" style="width:140px;" type="number" placeholder="0.00000000" step="0.01" value="0.00000000" onChange="unit.parse(this, $('#qrunit').val());showQRCode();" />
+                <select id="qrunit" class="unit button is-inverse has-fixed-icon" style="margin-left:10px; height:43px; width:100px;" onChange="unit.format('#qramount', $(this).val());showQRCode();">
                     <option value="0" title="DigitalRS">DRS</option>
                     <option value="1" title="Milli-DigitalRS (1 / 1000)">mDRS</option>
                     <option value="2" title="Micro-DigitalRS (1 / 1000000)">&micro;DRS</option>
@@ -255,9 +257,9 @@
                         <label>Custom change address: </label>
                         <div class="flex-left">
                             <input id="change_address" title="Optional address to receive transaction change" placeholder="Enter a DigitalRS address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)" maxlength="128" oninput="base58.check(this);" />
-                            <a class="button is-inverse has-fixed-icon"  style="margin-right:10px; margin-left:10px; height:43px; width:43px;" onclick="openAddressBook('#change_address', '', false)"><i class="fa fa-book"></i></a>
-                            <a class="button is-inverse has-fixed-icon"  style="margin-right:10px; height:43px; width:43px;" onclick="paste('#change_address')"><i class="fa fa-files-o"></i></a>
-                            <a class="button is-inverse has-fixed-icon"  style="height:43px; width:43px;" onclick="$('#change_address').val('').css('background', '').css('color', '');"><i class="fa fa-times"></i></a>
+                            <a class="button is-inverse has-fixed-icon"  style="margin-right:10px; margin-left:10px; height:43px; width:43px;" onClick="openAddressBook('#change_address', '', false)"><i class="fa fa-book"></i></a>
+                            <a class="button is-inverse has-fixed-icon"  style="margin-right:10px; height:43px; width:43px;" onClick="paste('#change_address')"><i class="fa fa-files-o"></i></a>
+                            <a class="button is-inverse has-fixed-icon"  style="height:43px; width:43px;" onClick="$('#change_address').val('').css('background', '').css('color', '');"><i class="fa fa-times"></i></a>
                         </div>
                         <br/>
                         <br/>
@@ -270,7 +272,7 @@
                     </div>
                 </div><!-- #coincontrol -->
 
-                <select id="txn_type" class="txn_type button is-inverse has-fixed-icon"  style="width:180px;" onchange="changeTxnType();">
+                <select id="txn_type" class="txn_type button is-inverse has-fixed-icon"  style="width:180px;" onChange="changeTxnType();">
                     <option value="0" title="DRS to DRS" selected>DRS to DRS</option>
                     <!--<option value="1" title="DRS to DigitalRS">DRS to DigitalRS</option>
                     <option value="2" title="DigitalRS to DigitalRS">DigitalRS to DigitalRS</option>
@@ -288,12 +290,12 @@
                     <div id="recipients">
                     </div>
                     <div class="ui-buttons">
-                        <a class="button is-inverse has-icon-spacing" onclick="addRecipient();" title="Send to multiple recipients at once"><i class="fa fa-plus"></i>Add Recipient</a>
-                        <a  class="button is-inverse has-icon-spacing" onclick="clearRecipients();" title="Remove all transaction fields"><i class="fa fa-close"></i>Clear All</a>
+                        <a class="button is-inverse has-icon-spacing" onClick="addRecipient();" title="Send to multiple recipients at once"><i class="fa fa-plus"></i>Add Recipient</a>
+                        <a  class="button is-inverse has-icon-spacing" onClick="clearRecipients();" title="Remove all transaction fields"><i class="fa fa-close"></i>Clear All</a>
                         <span title="Current spendable balance"><a class="current_spenable_balance"><b>Balance:</b> <span class="balance">0.00</span> <span class="unit">DRS</span></span>
                         <span></span>
                         <a class="button is-inverse has-icon-spacing"  id="suggest_ring_size" href="javascript:suggestRingSize();">Suggest Ring Size <i class="fa fa-calculator"></i></a>
-                        <a class="button is-inverse has-icon-spacing" onclick="sendCoins();" title="Confirm the send action"><i class="fa fa-arrow-right"></i>Send</a>
+                        <a class="button is-inverse has-icon-spacing" onClick="sendCoins();" title="Confirm the send action"><i class="fa fa-arrow-right"></i>Send</a>
                     </div>
                 </div><!-- /content -->
             </div><!-- /bottom -->
@@ -336,9 +338,9 @@
                     </table>
 
                     <div class="ui-buttons">
-                        <a class="button is-inverse has-icon-spacing" href="#filter-address" onclick="$('#filter-address').val(bridge.newAddress(true)).trigger('keyup');resizeFooter();"><i class="fa fa-plus"></i>New Address</a>
+                        <a class="button is-inverse has-icon-spacing" href="#filter-address" onClick="$('#filter-address').val(bridge.newAddress(true)).trigger('keyup');resizeFooter();"><i class="fa fa-plus"></i>New Address</a>
                         <a class="button is-inverse has-icon-spacing" href="javascript:copy('#receive .footable .selected .address');"><i class="fa fa-copy"></i>Copy Address</a>
-                        <a class="button is-inverse has-icon-spacing" href="#qrcode-modal" onclick="showQRCode($('#receive .footable .selected .address').text(), $('#receive .footable .selected .label').attr('data-value'));"><i class="fa fa-qrcode fa-lg margin-right-10"></i>Show QR Code</a>
+                        <a class="button is-inverse has-icon-spacing" href="#qrcode-modal" onClick="showQRCode($('#receive .footable .selected .address').text(), $('#receive .footable .selected .label').attr('data-value'));"><i class="fa fa-qrcode fa-lg margin-right-10"></i>Show QR Code</a>
                         <a class="button is-inverse has-icon-spacing" href="javascript:bridge.userAction({'signMessage': $('#receive .footable .selected .address').text()});"><i class="fa fa-pencil-square-o"></i>Sign Message</a>
                     </div>
                 </div><!-- /content -->
@@ -440,11 +442,11 @@
                     </table>
 
                     <div class="ui-buttons">
-                       <a class="button is-inverse has-icon-spacing" href="#filter-addressbook" onclick="$('#filter-addressbook').val(bridge.newAddress(false)).trigger('keyup');resizeFooter();"><i class="fa fa-plus"></i>Add Address</a>
+                       <a class="button is-inverse has-icon-spacing" href="#filter-addressbook" onClick="$('#filter-addressbook').val(bridge.newAddress(false)).trigger('keyup');resizeFooter();"><i class="fa fa-plus"></i>Add Address</a>
                        <a class="button is-inverse has-icon-spacing" href="javascript:copy('#addressbook .footable .selected .address');"><i class="fa fa-copy"></i>Copy Address</a>
-                       <a class="button is-inverse has-icon-spacing" href="#qrcode-modal" onclick="showQRCode($('#addressbook .footable .selected .address').text(), $('#addressbook .footable .selected .label').attr('data-value'));"><i class="fa fa-qrcode fa-lg margin-right-10"></i>Show QR Code</a>
+                       <a class="button is-inverse has-icon-spacing" href="#qrcode-modal" onClick="showQRCode($('#addressbook .footable .selected .address').text(), $('#addressbook .footable .selected .label').attr('data-value'));"><i class="fa fa-qrcode fa-lg margin-right-10"></i>Show QR Code</a>
                        <a class="button is-inverse has-icon-spacing" href="javascript:bridge.userAction({'verifyMessage': $('#addressbook .footable .selected .address').text()});"><i class="fa fa-check"></i>Verify Message</a>
-                       <a class="button is-inverse has-icon-spacing" href="#filter-addressbook" onclick="var addr=$('#addressbook .footable .selected .address');if(bridge.deleteAddress(addr.text()))addr.closest('tr').remove();resizeFooter();"><i class="fa fa-close"></i>Delete</a>
+                       <a class="button is-inverse has-icon-spacing" href="#filter-addressbook" onClick="var addr=$('#addressbook .footable .selected .address');if(bridge.deleteAddress(addr.text()))addr.closest('tr').remove();resizeFooter();"><i class="fa fa-close"></i>Delete</a>
                     </div>
                 </div><!-- /content -->
             </div><!-- /bottom -->
@@ -459,18 +461,18 @@
             <a class="modal_close" href="#close"><i class="fa fa-times-circle red"></i></a>
             <div style="white-space:nowrap;">
                 <label for="new-contact-address" class="recipient">Address: </label>
-                <input id="new-contact-address"  class="recipient input_box" style="width: 300px;" title="The address to send the payment to  (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)" placeholder="Enter a DigitalRS address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)" onchange="if(base58.check(this)) $('#new-contact-pubkey').val(bridge.getPubKey(this.value, $('#new-contact-name').val()));" maxlength="128" oninput="base58.check(this);"/>
-                <a class="button is-inverse has-fixed-icon" title="Choose address from address book" style="margin-right:10px; margin-left:10px; height:43px; width:43px;" onclick="openAddressBook('#new-contact-address', '#new-contact-name', true)"><i class="fa fa-book"></i></a>
-                <a class="button is-inverse has-fixed-icon" title="Paste address from clipboard"     style="margin-right:10px; height:43px; width:43px;" onclick="paste('#new-contact-address')"><i class="fa fa-files-o"></i></a>
-                <a class="button is-inverse has-fixed-icon" title="Remove this recipient"            style="height:43px; width:43px;" onclick="$('#new-contact-address').val('').css('background', '').css('color', '');"><i class="fa fa-times"></i></a>
+                <input id="new-contact-address"  class="recipient input_box" style="width: 300px;" title="The address to send the payment to  (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)" placeholder="Enter a DigitalRS address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)" onChange="if(base58.check(this)) $('#new-contact-pubkey').val(bridge.getPubKey(this.value, $('#new-contact-name').val()));" maxlength="128" oninput="base58.check(this);"/>
+                <a class="button is-inverse has-fixed-icon" title="Choose address from address book" style="margin-right:10px; margin-left:10px; height:43px; width:43px;" onClick="openAddressBook('#new-contact-address', '#new-contact-name', true)"><i class="fa fa-book"></i></a>
+                <a class="button is-inverse has-fixed-icon" title="Paste address from clipboard"     style="margin-right:10px; height:43px; width:43px;" onClick="paste('#new-contact-address')"><i class="fa fa-files-o"></i></a>
+                <a class="button is-inverse has-fixed-icon" title="Remove this recipient"            style="height:43px; width:43px;" onClick="$('#new-contact-address').val('').css('background', '').css('color', '');"><i class="fa fa-times"></i></a>
             </div>
             <div style="white-space:nowrap;">
                 <label for="new-contact-name" class="recipient">Name: </label>
-                <input id="new-contact-name"  class="recipient input_box" style="width: 475px;" title="Enter a label for this address to add it to your address book" placeholder="Enter a label for this address to add it to your address book" onchange="$('#new-contact-pubkey').val(bridge.getPubKey($('#new-contact-address').val(), this.value));" maxlength="128"  />
+                <input id="new-contact-name"  class="recipient input_box" style="width: 475px;" title="Enter a label for this address to add it to your address book" placeholder="Enter a label for this address to add it to your address book" onChange="$('#new-contact-pubkey').val(bridge.getPubKey($('#new-contact-address').val(), this.value));" maxlength="128"  />
             </div>
             <div id="new-contact-pubkey-row" style="white-space:nowrap;">
                 <label for="new-contact-pubkey" class="recipient">Public Key: </label>
-                <input id="new-contact-pubkey"  class="recipient input_box" style="width: 475px;" title="Enter a public key for the address above" placeholder="Enter a public key for the address above" onchange="bridge.setPubKey($('#new-contact-address').val(), this.value)" />
+                <input id="new-contact-pubkey"  class="recipient input_box" style="width: 475px;" title="Enter a public key for the address above" placeholder="Enter a public key for the address above" onChange="bridge.setPubKey($('#new-contact-address').val(), this.value)" />
             </div>
 
             <a class="button is-inverse has-icon-spacing" href="javascript:newConversation();">Start Conversation <i class="fa fa-check"></i></a>
@@ -534,12 +536,12 @@
 
                     <div class="tools-bar">
                         <div class="left-bar">
-                            <a href="#" class="bold" onclick="editorCommand('**', '**');"><i class="fa fa-bold"></i></a>
-                            <a href="#" class="italic" onclick="editorCommand('*', '*');"><i class="fa fa-italic"></i></a>
-                            <a href="#" class="underline" onclick="editorCommand('__', '__');"><i class="fa fa-underline"></i></a>
+                            <a href="#" class="bold" onClick="editorCommand('**', '**');"><i class="fa fa-bold"></i></a>
+                            <a href="#" class="italic" onClick="editorCommand('*', '*');"><i class="fa fa-italic"></i></a>
+                            <a href="#" class="underline" onClick="editorCommand('__', '__');"><i class="fa fa-underline"></i></a>
                             <!--a href="#" class="strikethrough" onclick="editorCommand('~~', '~~');"><i class="fa fa-strikethrough"></i></a-->
-                            <a href="#" class="link" onclick="editorCommand('[', '](http://digitalrs.me)');"><i class="fa fa-link"></i></a>
-                            <a href="#" class="image" onclick="editorCommand('![imageinfo](', ')');"><i class="fa fa-image"></i></a>
+                            <a href="#" class="link" onClick="editorCommand('[', '](http://digitalrs.me)');"><i class="fa fa-link"></i></a>
+                            <a href="#" class="image" onClick="editorCommand('![imageinfo](', ')');"><i class="fa fa-image"></i></a>
                         </div>
                         <div class="right-bar">
                             <a class="submit" href="javascript:sendMessage();">Send<i class="fa fa-caret-right"></i></a>
@@ -653,8 +655,8 @@
                         <div class="option">
                             <p>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1kB. Fee 0.01 recommended.</p>
                             <label for="optFee" class="option">Pay transaction fee:</label>
-                            <input  id="optFee" type="number" placeholder="0.00000000" step="0.01" value="0.00000000" onchange="unit.parse(this, $('#optFeeunit').val());" />
-                            <select id="optFeeunit" class="unit button is-inverse has-fixed-icon" style="margin-left:10px; height:43px; width:100px;" onchange="unit.format('#optFee', $(this).val());">
+                            <input  id="optFee" type="number" placeholder="0.00000000" step="0.01" value="0.00000000" onChange="unit.parse(this, $('#optFeeunit').val());" />
+                            <select id="optFeeunit" class="unit button is-inverse has-fixed-icon" style="margin-left:10px; height:43px; width:100px;" onChange="unit.format('#optFee', $(this).val());">
                                 <option value="0" title="DigitalRS">DRS</option>
                                 <option value="1" title="Milli-DigitalRS (1 / 1000)">mDRS</option>
                                 <option value="2" title="Micro-DigitalRS (1 / 1000000)">&micro;DRS</option>
@@ -668,8 +670,8 @@
                         <div class="option">
                             <p>Reserved amount does not participate in staking and is therefore spendable at any time.</p>
                             <label for="optReserveBalance" class="option">Reserve:</label>
-                            <input  id="optReserveBalance" type="number" placeholder="0.00000000" step="0.01" value="0.00000000" onchange="unit.parse(this, $('#optReserveBalanceunit').val());" />
-                            <select id="optReserveBalanceunit" class="unit button is-inverse has-fixed-icon" style="margin-left:10px; height:43px; width:100px;" onchange="unit.format('#optReserveBalance', $(this).val());">
+                            <input  id="optReserveBalance" type="number" placeholder="0.00000000" step="0.01" value="0.00000000" onChange="unit.parse(this, $('#optReserveBalanceunit').val());" />
+                            <select id="optReserveBalanceunit" class="unit button is-inverse has-fixed-icon" style="margin-left:10px; height:43px; width:100px;" onChange="unit.format('#optReserveBalance', $(this).val());">
                                 <option value="0" title="DigitalRS">DRS</option>
                                 <option value="1" title="Milli-DigitalRS (1 / 1000)">mDRS</option>
                                 <option value="2" title="Micro-DigitalRS (1 / 1000000)">&micro;DRS</option>
@@ -821,9 +823,9 @@
                     </div><!-- /#options-display -->
 
                     <div class="ui-buttons">
-                        <a class="button is-inverse has-icon-spacing" id="options-ok"     href="#" onclick="if(this.className.indexOf('disabled') == -1){optionsPage.save();prevPage.click();}">OK <i class="fa fa-check"></i></a>
-                        <a class="button is-inverse has-icon-spacing" id="options-cancel" href="#" onclick="optionsPage.update();prevPage.click();">Cancel <i class="fa fa-times"></i></a>
-                        <a class="button is-inverse has-icon-spacing" id="options-apply"  href="#" onclick="if(this.className.indexOf('disabled') == -1) optionsPage.save();">Apply <i class="fa fa-floppy-o"></i></a>
+                        <a class="button is-inverse has-icon-spacing" id="options-ok"     href="#" onClick="if(this.className.indexOf('disabled') == -1){optionsPage.save();prevPage.click();}">OK <i class="fa fa-check"></i></a>
+                        <a class="button is-inverse has-icon-spacing" id="options-cancel" href="#" onClick="optionsPage.update();prevPage.click();">Cancel <i class="fa fa-times"></i></a>
+                        <a class="button is-inverse has-icon-spacing" id="options-apply"  href="#" onClick="if(this.className.indexOf('disabled') == -1) optionsPage.save();">Apply <i class="fa fa-floppy-o"></i></a>
                     </div>
                 </div><!-- /content -->
             </div><!-- /bottom -->
@@ -846,7 +848,7 @@
 
         <div id="footer">
             <span id="footer-icons">
-                <i id="encryptionIcon"    style="padding-right:5px;" class="fa fa-lock fa-lg cursor-pointer red" onclick="bridge.userAction(['toggleLock']);" title="Wallet is encrypted and currently locked"></i>
+                <i id="encryptionIcon"    style="padding-right:5px;" class="fa fa-lock fa-lg cursor-pointer red" onClick="bridge.userAction(['toggleLock']);" title="Wallet is encrypted and currently locked"></i>
                 <i id="stakingIcon"       style="padding-right:5px;" class="fa fa-cog fa-lg not-staking" title="Not staking because wallet is locked"></i>
                 <img id="connectionsIcon" style="cursor:default; padding-right:5px" src="qrc:///icons/connect_0"/ title="0 active connection(s) to DigitalRS network" />
                 <img id="syncingIcon"     style="cursor:default;"                  src="qrc:///icons/syncing"/ title="Wallet is syncing" />
