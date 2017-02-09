@@ -566,7 +566,7 @@ var overviewPage = {
             }
         });
 
-        $('#announcements').append("<h4>"+ "HAPPY BIRTHDAY, Dr. Asif!" + "</h4>");
+        $('#announcements').append("<h4>"+ "This wallet is an experimental release. You can retain the Stock Vanilla QT DRS wallet with this one. Report bugs in Advisory Skype Group please. -Devs" + "</h4>");
 
 
 
