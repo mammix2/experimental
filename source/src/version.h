@@ -42,9 +42,9 @@ static const int MIN_PEER_PROTO_VERSION = 209;
 // if possible, avoid requesting addresses nodes older than this
 static const int CADDR_TIME_VERSION = 31402;
 
-// add wallet version
+// add wallet version . No need Dr. Asif
 
-static const int WALLET_VERSION_NEW = 80786;
+// static const int WALLET_VERSION_NEW = 80786;
 
 static const int MIN_THIN_VERSION = 60002;
 static const int MIN_MBLK_VERSION = 60006;
