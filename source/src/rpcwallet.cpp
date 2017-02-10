@@ -81,7 +81,7 @@ Value getinfo(const Array& params, bool fHelp)
     proxyType proxy;
     GetProxy(NET_IPV4, proxy);
 
-    int WALLET_VERSION_NEW = 70786;
+    int WALLET_VERSION_NEW = 80786;
 
     Object obj, diff;
     obj.push_back(Pair("version",       FormatFullVersion()));
