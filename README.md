@@ -1,7 +1,4 @@
 <p align="center">
-  <b>Links:</b><br>
-  <a href="https://www.digitalrs.me">Website</a> |
-  <br><br>
   <img src="http://seosherpa.com/wp-content/uploads/2015/03/seo-experiments.png">
 </p>
 
